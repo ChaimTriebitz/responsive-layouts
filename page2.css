@@ -1,0 +1,98 @@
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+* {
+	box-sizing: border-box;
+	font-family: 'Gotham Light', sans-serif;
+	text-transform: uppercase;
+}
+
+body {
+	background-color: #33aaee;
+	margin: 0%;
+	font-size: 2.4rem;
+}
+
+.main-container {
+	margin-top: 25px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: lightblue;
+	flex-grow: 1;
+}
+
+.content {
+	background-color: lightgray;
+	flex-grow: 4;
+}
+.features-container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 4;
+}
+
+.feature,
+.header,
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.feature-one {
+	background-color: lemonchiffon;
+	flex-grow: 1;
+}
+.feature-two {
+	background-color: lightslategray;
+	flex-grow: 1;
+}
+.feature-three {
+	background-color: lightpink;
+	flex-grow: 1;
+}
+
+.sign-up {
+	background-color: lightgreen;
+	flex-grow: 1;
+}
+
+@media screen and (min-width: 750px) {
+	.features-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-grow: 5.5;
+	}
+	.feature {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.header {
+		flex-grow: 5;
+	}
+	.features-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.sign-up {
+		order: 1;
+		min-height: 0px;
+	}
+
+	.feature {
+		width: 33.3%;
+	}
+	.feature:not(.sign-up) {
+		min-height: 300px;
+	}
+
+	.content {
+		order: 1;
+		flex-grow: 7;
+	}
+}
